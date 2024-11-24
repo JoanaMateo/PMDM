@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         // Toast para mostrar mensajes
         val mensajeToastVacio = Toast.makeText(this, R.string.mensajeToastVacio, Toast.LENGTH_SHORT)
@@ -47,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         val tipoEstado = findViewById<Spinner>(R.id.tipoEstado)
         val grupoProfesional = findViewById<Spinner>(R.id.grupoProfesional)
 
-        // Variables de estado
+        // Variables
         var selectedItemTE = ""
         var selectedItemGP = ""
         var valueNumPagas = -1
@@ -67,30 +72,31 @@ class MainActivity : AppCompatActivity() {
         )
 
         // Configuración de spinners
-        setupSpinner(tipoEstado, itemsTE) { position, item ->
+        configuracionSpinner(tipoEstado, itemsTE) { position, item ->
             selectedItemTE = if (position == 0) "" else item
         }
 
-        setupSpinner(grupoProfesional, itemsGP) { position, item ->
+        configuracionSpinner(grupoProfesional, itemsGP) { position, item ->
             selectedItemGP = if (position == 0) "" else item
         }
 
         // Configuración de RadioGroups
-        setupRadioGroup(numPagas) { selectedText, _ ->
+        configuracionRadioGroup(numPagas) { selectedText, _ ->
             valueNumPagas = selectedText.toIntOrNull() ?: -1
         }
 
-        setupRadioGroup(tipoContrato) { _, position ->
+        configuracionRadioGroup(tipoContrato) { _, position ->
             positionTipoContrato = position
         }
 
-        setupRadioGroup(rangoEdad) { _, position ->
+        configuracionRadioGroup(rangoEdad) { _, position ->
             positionRangoEdad = position
         }
 
-        setupRadioGroup(gradoDiscap) { _, position ->
+        configuracionRadioGroup(gradoDiscap) { _, position ->
             positionGradoDiscap = position
         }
+
         // Botón Calcular
         buttonCalcular.setOnClickListener {
             // Validaciones
@@ -120,6 +126,7 @@ class MainActivity : AppCompatActivity() {
                 val salarioNetoAnual = salario - irpf
                 val salarioNetoMensual = if (valueNumPagas > 0) salarioNetoAnual / valueNumPagas else 0.0
 
+                //Paso de variables Activity2
                 val actividad2 = Intent(this, MainActivity2::class.java)
                 actividad2.putExtra("salarioNetoMensual", salarioNetoMensual)
                 actividad2.putExtra("grupoProfesional", selectedItemGP)
@@ -139,16 +146,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Listener para cambiar el padding según los insets del sistema
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
     }
 
     // Configuración de Spinner
-    private fun setupSpinner(spinner: Spinner, items: List<String>, callback: (Int, String) -> Unit) {
+    private fun configuracionSpinner(spinner: Spinner, items: List<String>, callback: (Int, String) -> Unit) {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, items)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
@@ -162,7 +163,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Configuración de RadioGroup
-    private fun setupRadioGroup(radioGroup: RadioGroup, callback: (String, Int) -> Unit) {
+    private fun configuracionRadioGroup(radioGroup: RadioGroup, callback: (String, Int) -> Unit) {
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
             val selectedRadioButton = group.findViewById<RadioButton>(checkedId)
             val position = group.indexOfChild(selectedRadioButton)
@@ -170,7 +171,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Obtener seguridad social según tipo de contrato
+    // Obtener tipo seguridad social según tipo de contrato
     private fun getSeguridadSocial(position: Int): Double {
         return when (position) {
             0 -> SEGURIDAD_SOC_CONTRATO_0

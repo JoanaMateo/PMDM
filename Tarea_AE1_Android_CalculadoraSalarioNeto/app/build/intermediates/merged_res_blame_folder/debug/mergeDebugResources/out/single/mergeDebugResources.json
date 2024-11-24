@@ -68,6 +68,10 @@
         "source": "/Users/joanamateo/.gradle/daemon/8.7/com.example.tarea_ae1_android_calculadorasalarioneto.app-main-34:/drawable/ic_launcher_foreground.xml"
     },
     {
+        "merged": "com.example.tarea_ae1_android_calculadorasalarioneto.app-debug-32:/layout_activity_main.xml.flat",
+        "source": "com.example.tarea_ae1_android_calculadorasalarioneto.app-main-34:/layout/activity_main.xml"
+    },
+    {
         "merged": "/Users/joanamateo/.gradle/daemon/8.7/com.example.tarea_ae1_android_calculadorasalarioneto.app-debug-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "/Users/joanamateo/.gradle/daemon/8.7/com.example.tarea_ae1_android_calculadorasalarioneto.app-main-34:/mipmap-mdpi/ic_launcher_round.webp"
     },

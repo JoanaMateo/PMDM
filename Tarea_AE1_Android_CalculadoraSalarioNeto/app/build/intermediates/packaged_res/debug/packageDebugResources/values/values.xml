@@ -35,7 +35,7 @@
     <string name="texto5">Seleccione su grupo profesional</string>
     <string name="texto6">Seleccione su grado de discapacidad</string>
     <string name="texto7">Seleccione su rando de edad</string>
-    <string name="textoCalculoFinal">El salario neto mensual es %s € y el grupo profesional es %s.</string>
+    <string name="textoCalculoFinal">El salario neto mensual es %s €, que pertenece al grupo profesional: %s.</string>
     <string name="tipoContrato1">Indefinido</string>
     <string name="tipoContrato2">Temporal</string>
     <string name="tituloActivity2">Resultado Salario Neto</string>

@@ -37,7 +37,7 @@
     <string name="text2VariablesSeleccionadas"></string>
     <string name="textResultadosCalculos">Otros datos de interes son:</string>
     <string name="text2ResultadosCalculos"></string>
-    <string name="textoCalculoFinal">El salario neto mensual es %s € y el grupo profesional es %s.</string>
+    <string name="textoCalculoFinal">El salario neto mensual es %s €, que pertenece al grupo profesional: %s.</string>
     <string name="buttonVolver">Volver</string>
 
     <string name="mensajeToastVacio">Hay campos vacios</string>
