@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Tarea_AE1_Android_CalculadoraSalarioNeto</string>
+    <string name="tituloApp">Calculadora de Salario Neto</string>
+    <string name="image_desc">Imagen principal</string>
+    <string name="texto1">Introduzca sus datos</string>
+
+    <string name="texto4">Seleccione su tipo de contrato</string>
+    <string name="tipoContrato1">Indefinido</string>
+    <string name="tipoContrato2">Temporal</string>
+
+    <string name="texto3">Seleccione su tipo de estado</string>
+    <string name="texto5">Seleccione su grupo profesional</string>
+
+    <string name="texto2">Seleccione su número de pagas</string>
+    <string name="paga1">12</string>
+    <string name="paga2">13</string>
+    <string name="paga3">14</string>
+    <string name="paga4">15</string>
+    <string name="paga5">16</string>
+
+    <string name="texto7">Seleccione su rando de edad</string>
+    <string name="edad1">Menor de 65 años</string>
+    <string name="edad2">Entre 65 y 75 años</string>
+    <string name="edad3">Mayor de 75 años</string>
+
+    <string name="texto6">Seleccione su grado de discapacidad</string>
+    <string name="gradoDiscp1">Ninguna o menor del 33%</string>
+    <string name="gradoDiscp2">Entre el 33% y el 64%</string>
+    <string name="gradoDiscp3">Igual o superior al 65% o con movilidad reducida</string>
+
+    <string name="hintSalarioBruto">Introduce el salario bruto anual</string>
+    <string name="hintNumHijos">Introduce el número de hijos</string>
+    <string name="buttonCalcular">Calcular</string>
+
+    <string name="tituloActivity2">Resultado Salario Neto</string>
+    <string name="textVariablesSeleccionadas">Los datos introducidos son:</string>
+    <string name="text2VariablesSeleccionadas"></string>
+    <string name="textResultadosCalculos">Otros datos de interes son:</string>
+    <string name="text2ResultadosCalculos"></string>
+    <string name="textoCalculoFinal">El salario neto mensual es %s € y el grupo profesional es %s.</string>
+    <string name="buttonVolver">Volver</string>
+
+    <string name="mensajeToastVacio">Hay campos vacios</string>
+
+</resources>

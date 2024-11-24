@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tarea1_pmdm.app-mergeDebugResources-30:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.example.tarea_ae1_android_calculadorasalarioneto.app-mergeDebugResources-30:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
                     "source": "/Users/joanamateo/.gradle/caches/transforms-4/89889b43e4c29bdfd4ed37d15a3a6971/transformed/core-1.15.0/res/values-en-rXC/values-en-rXC.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/joanamateo/.gradle/caches/transforms-4/7125aa3367f80187ee2e0c7c1271c2f5/transformed/appcompat-1.6.1/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/Users/joanamateo/.gradle/caches/transforms-4/1faedc4b8ec8ce5d7c107129a27884bd/transformed/appcompat-1.7.0/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
