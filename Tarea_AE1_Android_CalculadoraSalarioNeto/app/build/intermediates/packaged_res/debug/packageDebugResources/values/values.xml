@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundMain">#7297C0</color>
+    <color name="black">#FF000000</color>
+    <color name="button">#080F37</color>
+    <color name="text">#10131B</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Tarea1_PMDM</string>
+    <string name="buttonCalcular">CALCULAR</string>
+    <string name="buttonVolverActy1">Volver a Calcular</string>
+    <string name="edad1">Menor de 65 años</string>
+    <string name="edad2">Entre 66 y 75 años</string>
+    <string name="edad3">mayor de 75 años</string>
+    <string name="gradoDiscp1">Ninguna o menor del 33%</string>
+    <string name="gradoDiscp2">Entre el 33% y el 64%</string>
+    <string name="gradoDiscp3">Igual o superior al 65% o con movilidad reducida</string>
+    <string name="hintNumHijos">Introduce número de hijos, por favor.</string>
+    <string name="hintSalarioBruto">Introduce el salario bruto anual, por favor.</string>
+    <string name="image_desc">Imagen Principal</string>
+    <string name="mensajeToastVacio">Revise los campos vacios, por favor.</string>
+    <string name="paga1">12</string>
+    <string name="paga2">13</string>
+    <string name="paga3">14</string>
+    <string name="paga4">15</string>
+    <string name="paga5">16</string>
+    <string name="texto1">Introduce los datos</string>
+    <string name="texto2">Selecciona el número de pagas, por favor:</string>
+    <string name="texto3">Seleccione su franja de edad, por favor:</string>
+    <string name="texto4">Seleccione su tipo de contrato, por favor:</string>
+    <string name="texto5">Seleccione su grado de discapacidad, por favor:</string>
+    <string name="textoFinal1">.Su salario neto mensual es: </string>
+    <string name="textoFinal2">, correspondiente a su grupo profesional:  </string>
+    <string name="textoTitulo2Acty2">Resultado</string>
+    <string name="textoTituloActy2">Sus datos proporcionados</string>
+    <string name="tipoContrato1">Indefinido</string>
+    <string name="tipoContrato2">Temporal</string>
+    <string name="tituloApp">CALCULADORA SALARIAL</string>
+    <style name="Base.Theme.Tarea1_PMDM" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Tarea1_PMDM" parent="Base.Theme.Tarea1_PMDM"/>
+</resources>

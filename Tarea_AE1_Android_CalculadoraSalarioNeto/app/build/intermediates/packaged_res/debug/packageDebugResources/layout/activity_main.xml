@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/backgroundMain"
+    tools:context=".MainActivity">
+    <!-- Encabezado fijo con título e imagen -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tituloApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:text="@string/tituloApp"
+            android:textColor="@color/text"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image_desc"
+            android:scaleType="fitCenter"
+            android:src="@drawable/imgcentral" />
+
+        <TextView
+            android:id="@+id/texto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:text="@string/texto1"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+    </LinearLayout>
+
+        <!-- ScrollView después del encabezado fijo -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toTopOf="@id/buttonCalcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Contenido desplazable dentro del ScrollView -->
+            <EditText
+                android:id="@+id/salarioBruto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/hintSalarioBruto"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#827717" />
+
+            <TextView
+                android:id="@+id/texto4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto4" />
+
+            <RadioGroup
+                android:id="@+id/tipoContrato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tipoContrato1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipoContrato1" />
+
+                <RadioButton
+                    android:id="@+id/tipoContrato2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipoContrato2" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/texto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto2" />
+
+            <RadioGroup
+                android:id="@+id/numPagas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/numPaga12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/paga1" />
+
+                <RadioButton
+                    android:id="@+id/numPaga13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/paga2" />
+
+                <RadioButton
+                    android:id="@+id/numPaga14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/paga3" />
+
+                <RadioButton
+                    android:id="@+id/numPaga15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/paga4" />
+
+                <RadioButton
+                    android:id="@+id/numPaga16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/paga5" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/texto3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto3" />
+
+            <RadioGroup
+                android:id="@+id/rangoEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/edad1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edad1" />
+
+                <RadioButton
+                    android:id="@+id/edad2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edad2" />
+
+                <RadioButton
+                    android:id="@+id/edad3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edad3" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/texto6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto5" />
+
+            <RadioGroup
+                android:id="@+id/gradoDiscap"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/gradoDiscp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gradoDiscp1" />
+
+                <RadioButton
+                    android:id="@+id/gradoDiscp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gradoDiscp2" />
+
+                <RadioButton
+                    android:id="@+id/gradoDiscp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gradoDiscp3" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/numHijos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/hintNumHijos"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#827717" />
+
+            <Spinner
+                android:id="@+id/tipoEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
+
+            <Spinner
+                android:id="@+id/grupoProfesional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/button"
+        android:text="@string/buttonCalcular"
+        android:textColorLink="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
